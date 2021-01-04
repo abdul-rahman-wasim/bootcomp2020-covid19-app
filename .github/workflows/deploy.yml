@@ -29,11 +29,19 @@ jobs:
         with:
            version: 14
 
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+        with:
+          version: 14
 
-        
-      - name:  Npm Build
-        run: npm run-script build
-        
+      - name: GitHub Action for Yarn
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+            cmd: install
+      
+      - name: Making Build
+        run: yarn build
+   
       - name: Surge intsall
         run: npm install -g surge
       - name: Deploy Website
