@@ -41,6 +41,8 @@ jobs:
       
       - name: Making Build
         run: yarn build
+        env:
+            CI: false
    
       - name: Surge intsall
         run: npm install -g surge
