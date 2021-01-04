@@ -32,7 +32,7 @@ jobs:
 
         
       - name:  Npm Build
-        run: npm run build
+        run: npm run-script build
         
       - name: Surge intsall
         run: npm install -g surge
